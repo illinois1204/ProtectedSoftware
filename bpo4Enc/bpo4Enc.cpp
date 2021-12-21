@@ -47,7 +47,7 @@ int main(int argc, char** argv)
         memcpy(&data[start_of_function + i], &buff, sizeof(buff));
     }
 
-    std::ofstream ofn("bpo4_encrypted.exe", std::fstream::binary);
+    std::ofstream ofn("bpo4_encrypted_programm.exe", std::fstream::binary);
     ofn.write(reinterpret_cast<const char*>(&data[0]), data.size() * sizeof(char));
     return 0;
 }
